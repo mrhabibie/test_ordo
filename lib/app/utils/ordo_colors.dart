@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class OrdoColors {
   OrdoColors._();
 
-  static const MaterialColor mainPurple = MaterialColor(0xffB07C1A, {});
+  static const MaterialColor mainPurple = MaterialColor(0xFFC440A6, {});
   static const MaterialColor darkPurple = MaterialColor(0xff8B3A75, {});
   static const MaterialColor purple = MaterialColor(0xff7864E6, <int, Color>{
     100: Color(0xffBEA4F3),

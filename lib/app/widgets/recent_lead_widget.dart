@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:test_ordo/app/utils/helpers.dart';
 import 'package:test_ordo/app/utils/ordo_colors.dart';
 import 'package:test_ordo/app/widgets/label_widget.dart';
@@ -97,7 +98,7 @@ class _RecentLeadWidgetState extends State<RecentLeadWidget> {
                     ),
                     title: Text(
                       _leads.elementAt(index)['name'],
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Get.textTheme.bodySmall,
                     ),
                     subtitle: RichText(
                       text: TextSpan(

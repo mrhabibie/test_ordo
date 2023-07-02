@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:test_ordo/app/utils/ordo_colors.dart';
 import 'package:test_ordo/app/utils/ordo_icons.dart';
 import 'package:test_ordo/app/widgets/kpi_widget.dart';
@@ -42,7 +43,7 @@ class _HomePageState extends State<HomePage> {
         elevation: 0,
         title: Text(
           'Dashboard',
-          style: Theme.of(context).textTheme.titleMedium,
+          style: Get.textTheme.titleMedium,
         ),
         actions: <Widget>[
           IconButton(
@@ -71,8 +72,7 @@ class _HomePageState extends State<HomePage> {
             const RevenueWidget(),
             // Another sections
             Container(
-              margin:
-                  EdgeInsets.only(top: MediaQuery.of(context).size.height / 3),
+              margin: EdgeInsets.only(top: Get.height / 3),
               decoration: const BoxDecoration(
                 color: OrdoColors.white,
                 borderRadius: BorderRadius.only(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:test_ordo/app/page/home.dart';
 import 'package:test_ordo/app/utils/ordo_colors.dart';
 
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Miftahur Rohman Habibie - MOBILE FE ORDO',
       theme: ThemeData(
         primarySwatch: Colors.blue,

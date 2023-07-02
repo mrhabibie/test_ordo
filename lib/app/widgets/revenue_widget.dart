@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:test_ordo/app/utils/helpers.dart';
 import 'package:test_ordo/app/utils/ordo_colors.dart';
@@ -24,7 +25,7 @@ class _RevenueWidgetState extends State<RevenueWidget> {
     ChartSampleData(x: 'Sun', y: 245000),
   ];
 
-  String _timeframeValue = _timeframe.first;
+  final _timeframeValue = _timeframe.first.obs;
 
   @override
   Widget build(BuildContext context) {
@@ -43,14 +44,8 @@ class _RevenueWidgetState extends State<RevenueWidget> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      'Total Revenue',
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                    Text(
-                      'Rp 257.500.000',
-                      style: Theme.of(context).textTheme.titleLarge,
-                    ),
+                    Text('Total Revenue', style: Get.textTheme.bodyMedium),
+                    Text('Rp 257.500.000', style: Get.textTheme.titleLarge),
                   ],
                 ),
                 PopupMenuButton(
@@ -74,17 +69,13 @@ class _RevenueWidgetState extends State<RevenueWidget> {
                               fontFamily: 'Poppins',
                               fontSize: 11,
                               fontWeight: FontWeight.normal,
-                              color: e == _timeframeValue
+                              color: e == _timeframeValue.value
                                   ? OrdoColors.mainPurple
                                   : OrdoColors.black,
                             ),
                           )))
                       .toList(),
-                  onSelected: (value) {
-                    setState(() {
-                      _timeframeValue = value;
-                    });
-                  },
+                  onSelected: (value) => _timeframeValue.value = value,
                 ),
               ],
             ),
@@ -97,7 +88,7 @@ class _RevenueWidgetState extends State<RevenueWidget> {
               primaryXAxis: CategoryAxis(
                 majorGridLines: const MajorGridLines(width: 0),
                 labelPlacement: LabelPlacement.betweenTicks,
-                labelStyle: Theme.of(context).textTheme.bodyMedium,
+                labelStyle: Get.textTheme.bodyMedium,
                 axisLine: const AxisLine(width: 0),
                 majorTickLines: const MajorTickLines(size: 0),
               ),

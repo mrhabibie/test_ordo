@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:test_ordo/app/utils/helpers.dart';
 import 'package:test_ordo/app/utils/ordo_colors.dart';
 
@@ -115,7 +116,7 @@ class _LeaderboardsWidgetState extends State<LeaderboardsWidget> {
                     ),
                     title: Text(
                       _leaderboards.elementAt(index)['name'],
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Get.textTheme.bodySmall,
                     ),
                     subtitle: Text(
                       dateToString(

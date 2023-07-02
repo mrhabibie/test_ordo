@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:test_ordo/app/utils/ordo_colors.dart';
 
 class KpiWidget extends StatefulWidget {
@@ -153,7 +154,7 @@ class _KpiWidgetState extends State<KpiWidget> {
                       margin: const EdgeInsets.symmetric(vertical: 5),
                       child: Text(
                         '${_kpi.elementAt(index)['point']}',
-                        style: Theme.of(context).textTheme.labelLarge,
+                        style: Get.textTheme.labelLarge,
                       ),
                     ),
                     Row(

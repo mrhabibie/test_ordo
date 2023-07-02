@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:test_ordo/app/utils/helpers.dart';
 import 'package:test_ordo/app/utils/ordo_colors.dart';
 
@@ -57,7 +58,7 @@ class LabelWidget extends StatelessWidget {
           margin: const EdgeInsets.only(top: 5),
           child: Text(
             oCcy.format(amount),
-            style: Theme.of(context).textTheme.bodySmall,
+            style: Get.textTheme.bodySmall,
           ),
         ),
       ],

@@ -115,10 +115,11 @@ class _KpiWidgetState extends State<KpiWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     RichText(
+                      overflow: TextOverflow.ellipsis,
                       text: TextSpan(
                         children: <InlineSpan>[
                           WidgetSpan(
-                            alignment: PlaceholderAlignment.middle,
+                            alignment: PlaceholderAlignment.top,
                             child: Container(
                               width: 20,
                               height: 20,

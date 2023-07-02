@@ -90,7 +90,7 @@ class _LeaderboardsWidgetState extends State<LeaderboardsWidget> {
             (index) => Row(
               children: <Widget>[
                 Container(
-                  margin: const EdgeInsets.only(right: 10),
+                  margin: const EdgeInsets.only(right: 20.5),
                   child: Text(
                     '${_leaderboards.elementAt(index)['number']}',
                     style: const TextStyle(
@@ -103,6 +103,7 @@ class _LeaderboardsWidgetState extends State<LeaderboardsWidget> {
                 ),
                 Expanded(
                   child: ListTile(
+                    contentPadding: EdgeInsets.zero,
                     leading: ClipRRect(
                       borderRadius: BorderRadius.circular(9),
                       child: Image.asset(
@@ -116,31 +117,18 @@ class _LeaderboardsWidgetState extends State<LeaderboardsWidget> {
                       _leaderboards.elementAt(index)['name'],
                       style: Theme.of(context).textTheme.bodySmall,
                     ),
-                    subtitle: RichText(
-                      text: TextSpan(
-                        children: <InlineSpan>[
-                          const WidgetSpan(
-                            alignment: PlaceholderAlignment.middle,
-                            child: Icon(
-                              Icons.calendar_month,
-                              size: 11.9,
-                              color: OrdoColors.gray2,
-                            ),
-                          ),
-                          TextSpan(
-                              text: ' ${dateToString(
-                            date: _leaderboards.elementAt(index)["date"],
-                            usingMonthName: true,
-                            withYear: true,
-                            separator: " ",
-                          )}'),
-                        ],
-                        style: const TextStyle(
-                          fontFamily: 'Poppins',
-                          fontSize: 11,
-                          fontWeight: FontWeight.normal,
-                          color: OrdoColors.gray2,
-                        ),
+                    subtitle: Text(
+                      dateToString(
+                        date: _leaderboards.elementAt(index)["date"],
+                        usingMonthName: true,
+                        withYear: true,
+                        separator: " ",
+                      ),
+                      style: const TextStyle(
+                        fontFamily: 'Poppins',
+                        fontSize: 11,
+                        fontWeight: FontWeight.normal,
+                        color: OrdoColors.gray2,
                       ),
                     ),
                     trailing: RichText(
